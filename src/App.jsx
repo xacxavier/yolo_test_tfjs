@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import * as tf from "@tensorflow/tfjs";
 import "@tensorflow/tfjs-backend-webgl"; // set backend to webgl
-import Loader from "./components/loader";
 import { Webcam } from "./utils/webcam";
 import { renderBoxes } from "./utils/renderBox";
 import { non_max_suppression } from "./utils/nonMaxSuppression";
@@ -83,9 +82,9 @@ const App = () => {
 
   return (
     <div className="App">
-      <h2>Object Detection Using YOLOv7 & Tensorflow.js</h2>
+      <h2>Object Detection Test App</h2>
       {loading.loading ? (
-        <Loader>Loading model... {(loading.progress * 100).toFixed(2)}%</Loader>
+        <div>Loading model... {(loading.progress * 100).toFixed(2)}%</div>
       ) : (
         <p> </p>
       )}
